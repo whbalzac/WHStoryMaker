@@ -13,7 +13,7 @@
 
 
 
->####WHStoryMaker接入说明：
+> #### WHStoryMaker接入说明：
 1. 在你需要用到 **WHStoryMaker** 的时候引用 **WHStoryMakerHeader.h** 头文件，**StoryMakeImageEditorViewController** 就是你需要的VC。
 2. **StoryMakeImageEditorViewController** 只提供一种初始化方法
    ````- (instancetype)initWithImage:(UIImage *)image;````
