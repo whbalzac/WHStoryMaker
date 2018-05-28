@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60A79A8020BB9F2A00C111A8 /* bgStory.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60A79A7F20BB9F2A00C111A8 /* bgStory.jpg */; };
 		A54983C71F3FF177000559D9 /* StoryMaker.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A54983C61F3FF177000559D9 /* StoryMaker.xcassets */; };
-		A54983C91F400779000559D9 /* bgStory.png in Resources */ = {isa = PBXBuildFile; fileRef = A54983C81F40076F000559D9 /* bgStory.png */; };
 		A5B17CDC1F3F1E51001B8448 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B17CDB1F3F1E51001B8448 /* AppDelegate.m */; };
 		A5B17CDF1F3F1E51001B8448 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B17CDE1F3F1E51001B8448 /* ViewController.m */; };
 		A5B17CE21F3F1E51001B8448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5B17CE01F3F1E51001B8448 /* Main.storyboard */; };
@@ -49,8 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60A79A7F20BB9F2A00C111A8 /* bgStory.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bgStory.jpg; sourceTree = "<group>"; };
 		A54983C61F3FF177000559D9 /* StoryMaker.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = StoryMaker.xcassets; sourceTree = "<group>"; };
-		A54983C81F40076F000559D9 /* bgStory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgStory.png; sourceTree = "<group>"; };
 		A5B17CD71F3F1E51001B8448 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5B17CDA1F3F1E51001B8448 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A5B17CDB1F3F1E51001B8448 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -179,8 +179,8 @@
 				A5B17CDD1F3F1E51001B8448 /* ViewController.h */,
 				A5B17CDE1F3F1E51001B8448 /* ViewController.m */,
 				A5B17D5C1F3F1FA7001B8448 /* PrefixHeader.pch */,
+				60A79A7F20BB9F2A00C111A8 /* bgStory.jpg */,
 				A5B17CE01F3F1E51001B8448 /* Main.storyboard */,
-				A54983C81F40076F000559D9 /* bgStory.png */,
 				A5B17CE31F3F1E51001B8448 /* Assets.xcassets */,
 				A5B17CE51F3F1E51001B8448 /* LaunchScreen.storyboard */,
 				A5B17CE81F3F1E51001B8448 /* Info.plist */,
@@ -406,7 +406,7 @@
 			files = (
 				A54983C71F3FF177000559D9 /* StoryMaker.xcassets in Resources */,
 				A5B17CE71F3F1E51001B8448 /* LaunchScreen.storyboard in Resources */,
-				A54983C91F400779000559D9 /* bgStory.png in Resources */,
+				60A79A8020BB9F2A00C111A8 /* bgStory.jpg in Resources */,
 				A5B17CE41F3F1E51001B8448 /* Assets.xcassets in Resources */,
 				A5B17CE21F3F1E51001B8448 /* Main.storyboard in Resources */,
 			);

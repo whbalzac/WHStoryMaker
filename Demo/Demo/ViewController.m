@@ -40,7 +40,8 @@
 }
 
 - (void)openTestImage{
-    StoryMakeImageEditorViewController *lalal = [[StoryMakeImageEditorViewController alloc] initWithImage:[UIImage imageNamed:@"bgStory.png"]];
+    UIImage *image = [UIImage imageNamed:@"bgStory.jpg"];
+    StoryMakeImageEditorViewController *lalal = [[StoryMakeImageEditorViewController alloc] initWithImage:image];
     [self presentViewController:lalal animated:YES completion:nil];
 }
 
