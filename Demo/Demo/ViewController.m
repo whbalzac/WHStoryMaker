@@ -41,8 +41,8 @@
 
 - (void)openTestImage{
     UIImage *image = [UIImage imageNamed:@"bgStory.jpg"];
-    StoryMakeImageEditorViewController *lalal = [[StoryMakeImageEditorViewController alloc] initWithImage:image];
-    [self presentViewController:lalal animated:YES completion:nil];
+    StoryMakeImageEditorViewController *storyMakerVc = [[StoryMakeImageEditorViewController alloc] initWithImage:image];
+    [self presentViewController:storyMakerVc animated:YES completion:nil];
 }
 
 - (void)openAlbum{
@@ -58,8 +58,8 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<NSString *,id> *)editingInfo {
     
     [picker dismissViewControllerAnimated:YES completion:^{
-        StoryMakeImageEditorViewController *lalal = [[StoryMakeImageEditorViewController alloc] initWithImage:image];
-        [self presentViewController:lalal animated:YES completion:nil];
+        StoryMakeImageEditorViewController *storyMakerVc = [[StoryMakeImageEditorViewController alloc] initWithImage:image];
+        [self presentViewController:storyMakerVc animated:YES completion:nil];
     }];
 }
 

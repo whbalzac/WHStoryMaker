@@ -14,6 +14,7 @@
 
 @property (nonatomic, assign) CGSize labelSize;
 
+@property (nonatomic, assign) BOOL hasShrinked;
 @end
 
 @implementation StoryMakeStickerLabelView
@@ -22,6 +23,7 @@
 {
     self = [super init];
     if (self) {
+        self.hasShrinked = NO;
         self.labelSize = labelSize;
     }
     return self;
@@ -29,13 +31,13 @@
 
 - (void)layoutSubviews
 {
-    self.seperatoeView.frame = CGRectMake(0, 0, self.labelSize.width + SCREENAPPLYHEIGHT(20), self.labelSize.height + SCREENAPPLYHEIGHT(10));
-    self.seperatoeView.center = CGPointMake(CGRectGetWidth(self.frame) / 2, CGRectGetHeight(self.frame) / 2);
-    [self addSubview:self.seperatoeView];
-    
     self.contentLabel.frame = CGRectMake(0, 0, self.labelSize.width, self.labelSize.height);
     self.contentLabel.center = CGPointMake(CGRectGetWidth(self.frame) / 2, CGRectGetHeight(self.frame) / 2);
+    
+    [self updateFrameForBorder];
+    [self addSubview:self.seperatoeView];
     [self addSubview:self.contentLabel];
+    [super layoutSubviews];
     
     UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchImage:)];
     pinchGesture.delegate = self;
@@ -48,7 +50,18 @@
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panImage:)];
     [self addGestureRecognizer:panGesture];
     
-    [super layoutSubviews];
+    if (!self.hasShrinked) {
+        self.contentLabel.transform = CGAffineTransformScale(self.transform, 1.0/[StoryMakeStickerLabelView shrinkRatio], 1.0/[StoryMakeStickerLabelView shrinkRatio]);
+        self.hasShrinked = YES;
+    }
+}
+
+- (void)updateFrameForBorder
+{
+    self.seperatoeView.frame = CGRectMake(0, 0, CGRectGetWidth(self.contentLabel.frame) + SCREENAPPLYHEIGHT(20), CGRectGetHeight(self.contentLabel.frame) + SCREENAPPLYHEIGHT(10));
+    self.seperatoeView.center = CGPointMake(CGRectGetMidX(self.contentLabel.frame), CGRectGetMidY(self.contentLabel.frame));
+    
+    [super updateFrameForBorder];
 }
 
 #pragma mark -
@@ -57,8 +70,9 @@
 -(void)pinchImage:(UIPinchGestureRecognizer *)gesture{
     
     if (gesture.state == UIGestureRecognizerStateChanged) {
-        self.transform = CGAffineTransformScale(self.transform, gesture.scale, gesture.scale);
+        self.contentLabel.transform = CGAffineTransformScale(self.transform, gesture.scale, gesture.scale);
         gesture.scale = 1;
+        [self updateFrameForBorder];
     }
 }
 

@@ -25,5 +25,7 @@
 @property (nonatomic, assign) BOOL isSelected;
 
 - (void)adjustSizeOfSelect:(CGFloat)scale;
++ (CGFloat)shrinkRatio;
+- (void)updateFrameForBorder;
 
 @end

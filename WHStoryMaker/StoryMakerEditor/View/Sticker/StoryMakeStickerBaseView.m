@@ -20,17 +20,25 @@
 {
     if (self = [super init]) {
         self.isSelected = YES;
+        self.userInteractionEnabled = YES;
     }
     return self;
 }
 
 - (void)layoutSubviews
 {
-    self.userInteractionEnabled = YES;
-    
-    self.closeBtn.frame = CGRectMake(0, 0, SCREENAPPLYHEIGHT(24), SCREENAPPLYHEIGHT(24));
-    self.closeBtn.center = CGPointMake(CGRectGetWidth(self.frame) - SCREENAPPLYHEIGHT(12), SCREENAPPLYHEIGHT(12));
     [self addSubview:self.closeBtn];
+}
+
+- (void)updateFrameForBorder
+{
+    self.closeBtn.frame = CGRectMake(0, 0, SCREENAPPLYHEIGHT(24)*[StoryMakeStickerBaseView shrinkRatio]/2.0, SCREENAPPLYHEIGHT(24)*[StoryMakeStickerBaseView shrinkRatio]/2.0);
+    self.closeBtn.center = CGPointMake(CGRectGetWidth(self.frame) - CGRectGetWidth(self.closeBtn.frame)/2.0, CGRectGetHeight(self.closeBtn.frame)/2.0);
+}
+
++ (CGFloat)shrinkRatio
+{
+    return 1.0;
 }
 
 #pragma mark -
