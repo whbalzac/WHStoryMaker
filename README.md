@@ -13,12 +13,11 @@ iOS 搭建美图——**贴纸，涂鸦，文字，滤镜**
 
 小姐姐有没有很好看！是不是该点一波Star！（无耻，滚粗。。）(￣ε(#￣)☆╰╮o(￣皿￣///)
 
-目前美图有四个功能，“贴纸 | 涂鸦 | 文字 | 滤镜”。
-<img src="./ReadmeResource/screenshot.jpg" width = "50%">
+目前美图有四个功能:
 
+**贴纸 | 涂鸦 | 文字 | 滤镜**
 
-
-
+<img src="./ReadmeResource/screenshot.jpg" width = "70%">
 
 ## WHStoryMaker接入说明：
 #### 1.引用头文件
