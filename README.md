@@ -17,7 +17,7 @@ iOS 搭建美图——**贴纸，涂鸦，文字，滤镜**
 
 **贴纸 | 涂鸦 | 文字 | 滤镜**
 
-<img src="./ReadmeResource/screenshot.jpg" width = "70%">
+<img src="./ReadmeResource/screenshot.jpg" width = "80%">
 
 ## WHStoryMaker接入说明：
 #### 1.引用头文件
@@ -36,4 +36,4 @@ StoryMakeImageEditorViewController *storyMakerVc = [[StoryMakeImageEditorViewCon
 
 ## License
 
-WHWeatherAnimation is released under the MIT license. See LICENSE for details.
+WHStoryMaker is released under the MIT license. See LICENSE for details.
