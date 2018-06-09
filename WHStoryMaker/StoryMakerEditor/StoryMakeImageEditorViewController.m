@@ -275,13 +275,13 @@
         rect2.size.width = SCREENAPPLYHEIGHT(340);
     }
     
-    StoryMakeStickerLabelView *stickeLabelView = [[StoryMakeStickerLabelView alloc] initWithLabelHeight:CGSizeMake(rect2.size.width*[StoryMakeStickerLabelView shrinkRatio], rect1.size.height*[StoryMakeStickerLabelView shrinkRatio])];
+    StoryMakeStickerLabelView *stickeLabelView = [[StoryMakeStickerLabelView alloc] initWithLabelHeight:CGSizeMake(rect2.size.width, rect1.size.height)];
     stickeLabelView.delegate = self;
     stickeLabelView.tag = self.stickerTags ++;
-    stickeLabelView.frame = CGRectMake(0, 0, rect2.size.width*[StoryMakeStickerLabelView shrinkRatio] + SCREENAPPLYHEIGHT(44), rect1.size.height*[StoryMakeStickerLabelView shrinkRatio] + SCREENAPPLYHEIGHT(34));
+    stickeLabelView.frame = CGRectMake(0, 0, rect2.size.width + SCREENAPPLYHEIGHT(44), rect1.size.height + SCREENAPPLYHEIGHT(34));
     stickeLabelView.center = CGPointMake(SCREENAPPLYHEIGHT(187.5), SCREENAPPLYHEIGHT(180));
     stickeLabelView.contentLabel.text = text;
-    stickeLabelView.contentLabel.font = [UIFont fontWithName:font.fontName size:font.pointSize*[StoryMakeStickerLabelView shrinkRatio]];
+    stickeLabelView.contentLabel.font = font;
     stickeLabelView.contentLabel.textColor = color;
     
     [self.drawImgView addSubview:stickeLabelView];
