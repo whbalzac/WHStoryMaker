@@ -104,6 +104,10 @@
     if (!_stickerBtn) {
         _stickerBtn = [[UIButton alloc] init];
         [_stickerBtn setImage:[UIImage imageNamed:@"story_maker_tab_sticker"] forState:UIControlStateNormal];
+        _stickerBtn.layer.shadowColor = UIColorFromRGB(0, 0, 0).CGColor;
+        _stickerBtn.layer.shadowOffset = CGSizeMake(0, 2);
+        _stickerBtn.layer.shadowRadius = 2;
+        _stickerBtn.layer.shadowOpacity = 0.3;
         [_stickerBtn addTarget:self action:@selector(stickerBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _stickerBtn;
@@ -114,6 +118,10 @@
     if (!_drawBtn) {
         _drawBtn = [[UIButton alloc] init];
         [_drawBtn setImage:[UIImage imageNamed:@"story_maker_tab_scrawl"] forState:UIControlStateNormal];
+        _drawBtn.layer.shadowColor = UIColorFromRGB(0, 0, 0).CGColor;
+        _drawBtn.layer.shadowOffset = CGSizeMake(0, 2);
+        _drawBtn.layer.shadowRadius = 2;
+        _drawBtn.layer.shadowOpacity = 0.3;
         [_drawBtn addTarget:self action:@selector(drawBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _drawBtn;
@@ -124,6 +132,10 @@
     if (!_writeBtn) {
         _writeBtn = [[UIButton alloc] init];
         [_writeBtn setImage:[UIImage imageNamed:@"story_maker_tab_type"] forState:UIControlStateNormal];
+        _writeBtn.layer.shadowColor = UIColorFromRGB(0, 0, 0).CGColor;
+        _writeBtn.layer.shadowOffset = CGSizeMake(0, 2);
+        _writeBtn.layer.shadowRadius = 2;
+        _writeBtn.layer.shadowOpacity = 0.3;
         [_writeBtn addTarget:self action:@selector(writeBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _writeBtn;
@@ -134,6 +146,10 @@
     if (!_fiterBtn) {
         _fiterBtn = [[UIButton alloc] init];
         [_fiterBtn setImage:[UIImage imageNamed:@"story_maker_tab_filter"] forState:UIControlStateNormal];
+        _fiterBtn.layer.shadowColor = UIColorFromRGB(0, 0, 0).CGColor;
+        _fiterBtn.layer.shadowOffset = CGSizeMake(0, 2);
+        _fiterBtn.layer.shadowRadius = 2;
+        _fiterBtn.layer.shadowOpacity = 0.3;
         [_fiterBtn addTarget:self action:@selector(filterBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _fiterBtn;

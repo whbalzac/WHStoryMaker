@@ -440,6 +440,10 @@
     if(!_cancelBtn) {
         _cancelBtn = [[UIButton alloc] init];
         [_cancelBtn setImage:[UIImage imageNamed:@"story_maker_close"] forState:UIControlStateNormal];
+        _cancelBtn.layer.shadowColor = UIColorFromRGB(0, 0, 0).CGColor;
+        _cancelBtn.layer.shadowOffset = CGSizeMake(0, 2);
+        _cancelBtn.layer.shadowRadius = 2;
+        _cancelBtn.layer.shadowOpacity = 0.3;
         [_cancelBtn addTarget:self action:@selector(cancelBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _cancelBtn;
@@ -463,6 +467,10 @@
         
         _confirmBtn.layer.masksToBounds = YES;
         _confirmBtn.layer.cornerRadius = SCREENAPPLYHEIGHT(22);
+        _confirmBtn.layer.shadowColor = UIColorFromRGB(0, 0, 0).CGColor;
+        _confirmBtn.layer.shadowOffset = CGSizeMake(0, 2);
+        _confirmBtn.layer.shadowRadius = 2;
+        _confirmBtn.layer.shadowOpacity = 0.3;
         [_confirmBtn addTarget:self action:@selector(confirmBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _confirmBtn;
